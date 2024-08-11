@@ -1,0 +1,140 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blank template</title>
+
+    <!-- Load external CSS styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  </head>
+
+
+  <body>
+
+    <!--NAVBAR-------------------------------------------------------->
+
+    <div id="nav" class="w3-bar w3-black w3-border w3-xxlarge">
+      <a id="nav" href="index.html" class="w3-bar-item w3-button" style="width:50%"><i class="fa fa-home"></i></a>
+      <a id="nav" href="https://www.linkedin.com/in/micha%C5%82-zaj%C4%85c" target="blank" class="w3-bar-item w3-button" style="width:50%"><i class="fa fa-linkedin-square"></i></a>
+      <!--
+      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-globe"></i></a>
+      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-sign-in"></i></a>
+      -->
+
+    </div>
+
+      <!--OBLICZENIA----"Oblicz wydajność grzewczą podłogówki------------------------------------------------>
+    
+    <div id="obliczenia"  class="container">
+
+      <h3 id="one">1. Oblicz wydajność grzewczą podłogówki: <br> </h3>
+
+        <!-- INPUT-->
+        <div class="input">
+          <label>t1 - temperatura w pomieszczeniu [<sup>o</sup>C]</label>
+          <input class="w3-input w3-border w3-round-large" type="number" id="temp1" value="20">
+        </div>
+        <br>
+        <!-- INPUT -->
+        <div class="input">
+          <label>t2 - temperatura posadzki [<sup>o</sup>C]</label>
+          <input class="w3-input w3-border w3-round-large" type="number" id="temp2" value="25">
+        </div>
+        <br>
+        <!--INPUT-->
+
+        <label>Rodzaj powierzchni grzewczej:</label>
+          <select class="w3-select" name="option" id="powierzchnia">
+            <option value="10.8">podłoga</option>
+            <option value="8">ściana</option>
+            <option value="6.5">sufit</option>
+          </select>
+
+
+        <div class="wynik">
+          <p>Wynik 1, wydajność: <span id="wynik1">0.00</span> [W/m<sup>2</sup>K]</p> 
+          <label id="wzor">Obliczenia: (t2-t1)*10.8 ,gdzie 10.8 to wydajność dla podłogi przy różnicy temp. 1K (wg. EN 1264-5), 8.0 ściana, 6.5 sufit.</label>       
+        </div>
+        <br>
+      
+    
+        <button type="button" class="w3-btn w3-blue" id="btn1">OBLICZ</button>
+
+      <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+
+
+    
+
+
+
+
+      <!--OBLICZENIA----"Oblicz ilość pętli------------------------------------------------>
+    
+
+
+
+      <h3 id="one">2. Oblicz ilość pętli i sumaryczną długość rury: <br> </h3>
+
+        <!-- INPUT-->
+        <div class="input">
+          <label>pow - powierzchnia pomieszczenia [m<sup>2</sup>]</label>
+          <input class="w3-input w3-border w3-round-large" type="number" id="pow" value="40">
+        </div>
+        <br>
+
+        <!-- INPUT -->
+
+        <label>Rozstaw rur: [cm]</label>
+        <select class="w3-select" name="option" id="va">
+          <option value="0.10">10 cm</option>
+          <option value="0.15">15 cm</option>
+          <option value="0.20">20 cm</option>
+        </select>
+
+
+        <div class="wynik">
+          <p>Wynik 2, potrzebna długość rury w pomieszczeniu: <span id="wynik2">0.00</span> [m]</p> 
+          <label id="wzor">Obliczenia: pow / va*100</label>      
+        </div>
+
+        <br>
+    
+        <!-- INPUT-->
+        <div class="input">
+          <label>dp - długość pojedynczej pętli [m]</label>
+          <input class="w3-input w3-border w3-round-large" type="number" id="dp" value="80">
+        </div>
+        <br>
+  
+        <div class="wynik">
+          <p>Wynik 3, ilość pętli: <span id="wynik3">0.00</span> [szt.]</p> 
+          <!--  <label id="wzor">Obliczenia: </label>    -->   
+        </div>
+
+        <button type="button" class="w3-btn w3-blue" id="btn2">OBLICZ</button>
+      
+        <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+
+
+        <table class = "tabela">
+          <tr><th>VA</th><th>m/m<sup>2</sup></th></tr> <!--indeks górny-->
+          <tr><td>VA30</td><td>3,3</td></tr>
+          <tr><td>VA20</td> <td>5</td></tr>
+          <tr><td>VA15</td> <td>6,6</td></tr>
+          <tr><td>VA10</td> <td>10</td></tr>
+          <tr><td>VA5</td> <td>20</td></tr>
+        </table>
+
+
+
+    </div>
+
+  <script src="2_fh.js"></script>
+  </body>
+        
+</html> 

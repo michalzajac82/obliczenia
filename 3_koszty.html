@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blank template</title>
+
+    <!-- Load external CSS styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  </head>
+
+
+  <body>
+
+    <!--NAVBAR-------------------------------------------------------->
+
+    <div id="nav" class="w3-bar w3-black w3-border w3-xxlarge">
+      <a id="nav" href="index.html" class="w3-bar-item w3-button" style="width:50%"><i class="fa fa-home"></i></a>
+      <a id="nav" href="https://www.linkedin.com/in/micha%C5%82-zaj%C4%85c" target="blank" class="w3-bar-item w3-button" style="width:50%"><i class="fa fa-linkedin-square"></i></a>
+    </div>
+
+
+     <!--OBLICZENIA---------------------------------------------------->
+    
+    <div id="obliczenia"  class="container">
+
+      <h3 id="one">1. Koszty ogrzewania: <br>  </h3>
+      <br>
+
+        <!-- INPUT DOTYCZĄCY POWIERZCHNI-->
+        <div class="input">
+          <label>"A" [m<sup>2</sup>] - powierzchnia domu</label>
+          <input class="w3-input w3-border w3-round-large" type="number" id="powierzchnia" value="200">
+        </div>
+        <br>
+
+        <!-- INPUT DOTYCZĄCY WSKAŹNIK ZAPOTRZEBOWANIA NA CIEPŁO-->
+        <div class="input">
+          <label>"WZC" [W/m<sup>2</sup>] - wskaźnikowe zapotrzebowanie na ciepło</label>
+          <input class="w3-input w3-border w3-round-large" type="number" id="zapotrzebowanie" value="45">
+        </div>
+        <br>
+
+        
+        <!-- INPUT DOTYCZĄCY CZASU PRACY INSTALACJI GRZEWCZEJ-->
+        <div class="input">
+          <label>"A" [h/rok] - czas pracy (przeważnie 1800 - 2000 h/rok)</label>
+          <input class="w3-input w3-border w3-round-large" type="number" id="czas" value="2000">
+        </div>
+        <br>
+
+
+        <!-- INPUT cena kWh -->
+        <div class="input">
+          <label>"KWH" [PLN/kWh] - średnia cena kWh  energii elektrycznej</label>
+          <input class="w3-input w3-border w3-round-large" type="number" id="kwh" value="0.77">
+        </div>
+        <br>
+
+
+         <!-- INPUT COP-->
+         <div class="input">
+          <label>COP - informuje nas o tym ile kWh oddanego ciepła przypada na 1 kWh energii elektrycznej pobranej przez pompę</label>
+          <input class="w3-input w3-border w3-round-large" type="number" id="cop" value="4">
+        </div>
+
+
+      <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+
+      <div class="wynik">
+        <p>Wynik 1, "ZC": <span id="wynik1">0.00</span> [zł/rok]</p>         
+      </div>
+
+      <button type="button" class="w3-btn w3-blue" id="btn1">OBLICZ</button>
+
+    </div>
+
+
+
+  <script src="3_koszty.js"></script>
+  </body>
+
+
+
+
+
+
+
+    

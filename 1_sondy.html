@@ -1,0 +1,142 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blank template</title>
+
+    <!-- Load external CSS styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  </head>
+
+
+  <body>
+
+    <!--NAVBAR-------------------------------------------------------->
+
+    <div id="nav" class="w3-bar w3-black w3-border w3-xxlarge">
+      <a id="nav" href="index.html" class="w3-bar-item w3-button" style="width:50%"><i class="fa fa-home"></i></a>
+      <a id="nav" href="https://www.linkedin.com/in/micha%C5%82-zaj%C4%85c" target="blank" class="w3-bar-item w3-button" style="width:50%"><i class="fa fa-linkedin-square"></i></a>
+      <!--
+      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-globe"></i></a>
+      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-sign-in"></i></a>
+      -->
+
+    </div>
+
+    <!--OBLICZENIA---------------------------------------------------->
+    
+    <div id="obliczenia"  class="container">
+
+      <h3 id="one">1. Zapotrzebowanie na ciepło: <br> ZC = A * WZC</h3>
+
+        <!-- INPUT DOTYCZĄCY POWIERZCHNI-->
+        <div class="input">
+          <label>"A" [m<sup>2</sup>] - powierzchnia domu</label>
+          <input class="w3-input w3-border w3-round-large" type="number" id="powierzchnia" value="200">
+        </div>
+        <br>
+        <!-- INPUT DOTYCZĄCY WSKAŹNIK ZAPOTRZEBOWANIA NA CIEPŁO-->
+        <div class="input">
+          <label>"WZC" [W/m<sup>2</sup>] - wskaźnikowe zapotrzebowanie na ciepło</label>
+          <input class="w3-input w3-border w3-round-large" type="number" id="zapotrzebowanie" value="45">
+        </div>
+
+
+        <div class="wynik">
+          <p>Wynik 1, "ZC": <span id="wynik1">0.00</span> [W]</p>         
+        </div>
+
+      <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+
+
+      <h3 id="one">2. Moc parownika pompy ciepła: <br> MP = ZC * (COP-1 / COP)</h3>
+
+        <!-- INPUT COP-->
+        <div class="input">
+          <label>COP - informuje nas o tym ile kWh oddanego ciepła przypada na 1 kWh energii elektrycznej pobranej przez pompę</label>
+          <input class="w3-input w3-border w3-round-large" type="number" id="cop" value="4">
+        </div>
+
+        <div class="wynik">
+          <p>Wynik 2, "MP": <span id="wynik2">0.00</span> [W]</p>
+        </div>
+
+
+      <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+
+
+      <h3 id="one">3. Obliczeniowa długość sond: <br> ODS = MP / MMS</h3>
+
+        <!-- INPUT MOC UZYSKANA Z METRA SONDY-->
+        <div class="input">
+          <label>"MMS" [W/m] - moc uzyskana z metra sondy </label>
+          <input class="w3-input w3-border w3-round-large" type="number" id="mocMetr" value="35">
+        </div>
+  
+        <div class="wynik">
+          <p>Wynik 3, "ODS": <span id="wynik3">0.00</span> [m]</p>
+        </div>
+
+      <h3 id="one">3.1 Dobrana ilość i długość sond: <br> IS i DS </h3>
+
+        <!-- INPUT DŁUGOŚĆ SONDY-->
+        <div class="input">
+          <label>Długość sondy RAUGEO GREEN PE-Xa [m]</label>
+          <input class="w3-input w3-border w3-round-large" type="number" id="dlugosc_sondy" value="100">
+        </div>
+
+
+        <div class="wynik">
+          <p>Wynik 4, "IS": <span id="wynik4">0.00</span> [szt.]</p>
+        </div>
+        <div class="wynik">
+          <p>Wynik 5, "DS": <span id="wynik5">0.00</span> [m]</p>
+        </div>
+
+      <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+
+      <h3 id="one">4. - Wskaźnik zysku z metra: <br> WM = ZC * GP / DS </h3>
+
+        <!-- INPUT godziny pracy z max obciążeniem -->
+        <div class="input">
+          <label>"GP" [h] - godziny pracy max obciążenie </label>
+          <input class="w3-input w3-border w3-round-large" type="number" id="godziny_pracy" value="2000">
+        </div>
+
+
+        <div class="wynik">
+          <p>Wynik 6, "WM": <span id="wynik6">0.00</span> [kWh/m a]</p>
+        </div>
+
+      <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+
+
+      <h3 id="one">5. Roczny zysk energii: <br> $ = DS * WM * KWH [kWh/a]</h3>
+
+
+        <!-- INPUT cena kWh -->
+        <div class="input">
+          <label>"KWH" [PLN/kWh] - średnia cena kWh  energii elektrycznej</label>
+          <input class="w3-input w3-border w3-round-large" type="number" id="kwh" value="0.77">
+        </div>
+
+        <div class="wynik">
+          <p>Wynik 7, "$": <span id="wynik7">0.00</span> [PLN/a]</p>
+        </div>
+
+
+      <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+    
+      <button type="button" class="w3-btn w3-blue" id="btn1">OBLICZ</button>
+
+    </div>
+
+  <script src="1_sondy.js"></script>
+  </body>
+        
+</html> 
