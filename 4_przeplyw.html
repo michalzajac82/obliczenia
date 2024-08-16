@@ -31,6 +31,8 @@
 
       <h3 id="one">1. Oblicz przepływ masowy: <br> </h3>
 
+<!--INPUTS-------------------------------------------------------->
+
       <div class="input">
         <label>wyd - wydajność z wykresu [W/m<sup>2</sup>]</label>
         <input class="w3-input w3-border w3-round-large" type="number" id="wyd" value="45">
@@ -41,10 +43,29 @@
         <label>dt - różnica temp [K]</label>
         <input class="w3-input w3-border w3-round-large" type="number" id="dt" value="2">
       </div>
+      <br>
+      
+      <div class="input">
+        <label>pow - powierzchnia [m<sup>2</sup>]</label>
+        <input class="w3-input w3-border w3-round-large" type="number" id="pow" value="10">
+      </div>
+ 
+
+<!--WYNIKI-------------------------------------------------------->
+
 
       <div class="wynik">
-        <p>Wynik 1, przepływ masowy pow: <span id="wynik1">0.00</span> [kg/h ????]</p> 
-        <label id="wzor">Obliczenia: wyd / (1.163*dt) * pow</label>       
+        <p>Wynik 1, przepływ masowy jedn.: <span id="wynik1">0.00</span> [kg/h ????]</p> 
+        <label id="wzor">Obliczenia: wyd / (1.163*dt)</label>       
+      </div>
+      <br>
+
+
+      <div class="wynik">
+        <p>Wynik 2, przepływ masowy pow.: <span id="wynik2">0.00</span> [kg/h ????]</p> 
+        <label id="wzor">Obliczenia: wyd / (1.163*dt) * pow</label>
+        <br>
+        <label>Max 2000 l/h</label>       
       </div>
       <br>
 
@@ -55,16 +76,6 @@
     </div>
 
 
-
-
-
-
-
-
-
-
-
-    
 
   <script src="4_przeplyw.js"></script> 
   </body>
